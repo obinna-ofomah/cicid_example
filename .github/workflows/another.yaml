@@ -1,0 +1,28 @@
+name: Testing a Multiple Job Workflow
+on:
+  push
+
+jobs:
+  build_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Congratulations
+        run: echon "Congratulations Obinna, I am happy that you didnt quit"
+
+      - name: Copy File
+        run: cat main.py > main_copy.py
+
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ass content to the file
+        run: echo "this is a new line added to the file" > main_copy.py
+
+  deploy_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List the content of the main_copy
+        run: cat main_copy.py
