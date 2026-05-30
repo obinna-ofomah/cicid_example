@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Congratulations
-        run: echon "Congratulations Obinna, I am happy that you didnt quit"
+        run: echo "Congratulations Obinna, I am happy that you didnt quit"
 
       - name: Copy File
         run: cat main.py > main_copy.py
