@@ -1,0 +1,16 @@
+name: My First Workflow
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Welcome Mwssage
+      runs: echo "Welcome, Obinna"
+
+    - name: List Files
+      runs: ls
+
+    - name: Read File
+      runs: cat README.md
