@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - name: Welcome Mwssage
-      runs: echo "Welcome, Obinna"
+      run: echo "Welcome, Obinna"
 
     - name: List Files
-      runs: ls
+      run: ls
 
     - name: Read File
-      runs: cat README.md
+      run: cat README.md
