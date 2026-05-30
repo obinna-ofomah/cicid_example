@@ -24,5 +24,8 @@ jobs:
   deploy_job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        
       - name: List the content of the main_copy
         run: cat main_copy.py
