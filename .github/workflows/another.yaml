@@ -16,12 +16,14 @@ jobs:
         run: cat main.py > main_copy.py
 
   test_job:
+    needs: build_job
     runs-on: ubuntu-latest
     steps:
       - name: Ass content to the file
         run: echo "this is a new line added to the file" > main_copy.py
 
   deploy_job:
+    needs: test_job
     runs-on: ubuntu-latest
     steps:
       - name: List the content of the main_copy
